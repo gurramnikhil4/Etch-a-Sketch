@@ -4,7 +4,7 @@ let sideLength=16;
 createGrid(sideLength);
 
 let changeButton=document.querySelector(".sideLength");
-changeButton.addEventListener("click",()=>{sideLength=prompt(`Input Side Length <= 100`);createGrid(sideLength)});
+changeButton.addEventListener("click",()=>{sideLength=prompt(`Input Side Length <= 100`);createGrid(sideLength?sideLength:16);});
 
 let clicked=false;
 window.addEventListener("mouseup",()=>{clicked=false});
