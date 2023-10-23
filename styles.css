@@ -1,0 +1,26 @@
+.panel{
+    padding:0.5px;
+    box-sizing: border-box;
+    width: 480px;
+    height:480px;
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    /* margin:1px; */
+}
+
+.pixel{
+    /* border: 1px solid black; */
+    background-color: white;
+    flex:1 1 auto; 
+    margin:0.5px;
+    
+
+}
+
+.row{
+    display:flex;
+    flex:1 1 auto;
+    /* margin:1px; */
+    
+}
