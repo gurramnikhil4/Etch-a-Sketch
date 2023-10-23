@@ -1,9 +1,16 @@
 let panel=document.querySelector(".panel");
 let w=document.querySelector("window");
 let sideLength=16;
+createGrid(sideLength);
+
+let changeButton=document.querySelector(".sideLength");
+changeButton.addEventListener("click",()=>{sideLength=prompt(`Input Side Length <= 100`);createGrid(sideLength)});
 
 let clicked=false;
 window.addEventListener("mouseup",()=>{clicked=false});
+function createGrid(sideLength){
+    if(sideLength>100){alert("Invalid Input");return;};
+panel.innerHTML=null;
 for(let i=0;i<sideLength;i++){
 let row=document.createElement('div');
 row.setAttribute("class","row");
@@ -17,8 +24,9 @@ row.setAttribute("class","row");
 
     }
     panel.appendChild(row);
-}
+}}
 
 function changeColor(e){
     if(clicked)e.target.setAttribute("style", "background-color: yellow;");
 }
+
