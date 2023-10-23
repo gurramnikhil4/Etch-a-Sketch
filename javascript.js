@@ -18,7 +18,7 @@ row.setAttribute("class","row");
         let pixel=document.createElement('div');
         pixel.setAttribute("class","pixel");
         row.appendChild(pixel);
-        pixel.addEventListener("mousedown",(e)=>{clicked=true;e.preventDefault();});
+        pixel.addEventListener("mousedown",(e)=>{clicked=true;e.preventDefault();changeColor(e);});
         pixel.addEventListener("mouseover", changeColor);
         pixel.addEventListener("mouseup",()=>{clicked=false});
 
